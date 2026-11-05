@@ -6,7 +6,7 @@ allowed-tools: Task, Read, Grep, Glob, Bash
 
 Run a code-quality workflow on: **$ARGUMENTS**
 
-If `$ARGUMENTS` is empty, use the files changed in the current `git diff` instead. If there are none, ask which path to check and stop.
+If `$ARGUMENTS` is empty, run `git diff --name-only` yourself and use those files as the target (the reviewer cannot run git, so pass it explicit paths). If there are none, ask which path to check and stop.
 
 ## Step 1 — Parallel (independent work)
 
